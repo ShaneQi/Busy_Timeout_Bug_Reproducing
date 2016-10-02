@@ -13,8 +13,8 @@ let beginTime = Date()
 
 let sqlite3 = try! SQLite("./db")
 do {
-	//  Set busy_timeout to 100 seconds.
-	try sqlite3.execute(statement: "PRAGMA busy_timeout = 100000;")
+	//  Set busy_timeout to 5 seconds.
+	try sqlite3.execute(statement: "PRAGMA busy_timeout = 5000;")
 
 	//  Make sure busy_timeout is successfully set.
 	try sqlite3.forEachRow(statement: "PRAGMA busy_timeout;") {
